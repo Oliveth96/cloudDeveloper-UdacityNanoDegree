@@ -1,9 +1,9 @@
 export const config = {
     "dev": {
-      "username": "",
-      "password": "",
-      "database": "",
-      "host": "",
+      "username": "olivethudagram",
+      "password": "olivethudagram",
+      "database": "olivethudagram",
+      "host": "olivethudagramdev.clzgrxfqt7ii.us-east-1.rds.amazonaws.com",
       "dialect": "postgres",
       "aws_region": "us-east-2",
       "aws_profile": "default",
