@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import { Router, Request, Response } from 'express';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
 
@@ -30,8 +31,8 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   /**************************************************************************** */
 
-  app.get("/filteredimage", async (req: express.Request, res: express.Response) => {
-    const {image_url} = req.query;
+  app.get("/filteredimage", async (req: Request, res: Response) => {
+    const image_url = req.query.image_url.toString();
     
     if(!image_url) {
       return res.status(400).json({"No image url was provided": false});
